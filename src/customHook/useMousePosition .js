@@ -1,3 +1,4 @@
+//not in use
 import React, { useEffect, useState } from "react";
 
 export default function useMousePosition() {
@@ -18,6 +19,8 @@ export default function useMousePosition() {
 
         return () => window.removeEventListener("mousemove", handleMouseMove);
     }, []);
+
+    console.log(mousePosition);
 
     return mousePosition;
 }
