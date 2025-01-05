@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// Custom Hook: useMousePosition
 const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -14,7 +13,6 @@ const useMousePosition = () => {
 
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
@@ -23,7 +21,6 @@ const useMousePosition = () => {
   return mousePosition;
 };
 
-// Main Component
 const MousePosition = () => {
   const { x, y } = useMousePosition();
 
